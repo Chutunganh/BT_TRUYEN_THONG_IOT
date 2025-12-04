@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arduino LED Control Web App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./assets/img/bluetooth_logo.png" alt="Logo" class="logo" />
+        <h1>Bluetooth-like LED Controller</h1>
+      </header>
+
+      <div class="controls">
+        <button id="connectBtn" class="btn primary">Connect to Arduino</button>
+        <div id="status" class="status hidden">Status: Disconnected</div>
+
+        <div class="button-group">
+          <button id="onBtn" class="btn on" disabled>ON</button>
+          <button id="offBtn" class="btn off" disabled>OFF</button>
+        </div>
+
+        <button id="disconnectBtn" class="btn secondary hidden">
+          Disconnect
+        </button>
+      </div>
+
+      <div id="connectionInfo" class="info hidden">
+        <p>Connected via Serial Port</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="toast" class="toast"></div>
+  </body>
+</html>
